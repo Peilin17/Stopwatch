@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/stopwatch">
+
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.example.hw2stopwatch.recordsFragment"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" />
+    <fragment
+        android:id="@+id/stopwatch"
+        android:name="com.example.hw2stopwatch.stopwatch"
+        android:label="fragment_stopwatch"
+        tools:layout="@layout/fragment_stopwatch" >
+        <action
+            android:id="@+id/action_stopwatch_to_recordsFragment2"
+            app:destination="@+id/recordsFragment" />
+    </fragment>
+</navigation>
